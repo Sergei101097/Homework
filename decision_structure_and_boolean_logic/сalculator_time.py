@@ -1,14 +1,14 @@
-i = int(input())
+import  math
+i = int(input("введите сек: "))
 
-if  i <= 3600:
-    g = i // 60
-    print(format(g, '.2f'), " минут")
+SEC_1 = 3600
+if  i <= SEC_1:
 
-elif 3600 <= i <= 86800:
-    g = i // 3600
-    print(format(g, '.2f'), 'часов')
+    min = i / 60
+    min_total = math.floor(min)
+    min_total_vs_sec = min_total * 60
+    total_sec = i - min_total_vs_sec
+    print(min_total,'мин :',total_sec,"сек")
 
-elif 86400 <= i:
-    g = i //86400
 
-    print(f"{g} дней")
+
